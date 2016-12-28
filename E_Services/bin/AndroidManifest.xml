@@ -1,0 +1,168 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.e_services"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <permission
+        android:name="com.android.sauditourism.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Access Location -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.sauditourism.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="ParseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.project.e_services.SplashActivity"
+            android:label="خدماتي"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainScreen"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsitesList_gov"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsitesList_univ"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsitesList_banks"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsitesList_fly"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsitesList_charity"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsitesList_news"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsiteView"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".FavList"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".WebsiteView2"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".Nearby_PlacesMainActivity"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name=".Nearby_PlaceDetailsActivity"
+            android:icon="@drawable/icon_home"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAaOn-LQVCRLuSFLs3PLfTdxHh8snVKcp4" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- ========================================================================================= -->
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.e_services" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

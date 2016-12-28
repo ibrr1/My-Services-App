@@ -1,0 +1,104 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainScreen" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/banksBtn"
+            style="@style/DashboardButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="21dp"
+            android:drawableTop="@drawable/btn_3"
+            android:text="@string/banks" />
+
+        <Button
+            android:id="@+id/univBtn"
+            style="@style/DashboardButton"
+            android:layout_alignBaseline="@+id/banksBtn"
+            android:layout_alignBottom="@+id/banksBtn"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/btn_2"
+            android:text="@string/universities" />
+
+        <Button
+            android:id="@+id/govBtn"
+            style="@style/DashboardButton"
+            android:layout_above="@+id/charityBtn"
+            android:layout_alignParentRight="true"
+            android:drawableTop="@drawable/btn_1"
+            android:text="@string/gov_web" />
+
+        <Button
+            android:id="@+id/flyBtn"
+            style="@style/DashboardButton"
+            android:layout_alignBaseline="@+id/charityBtn"
+            android:layout_alignBottom="@+id/charityBtn"
+            android:layout_alignLeft="@+id/govBtn"
+            android:layout_alignParentRight="true"
+            android:drawableTop="@drawable/btn_4"
+            android:text="@string/fly" />
+
+        <Button
+            android:id="@+id/charityBtn"
+            style="@style/DashboardButton"
+            android:layout_below="@+id/univBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:drawableTop="@drawable/btn_5"
+            android:text="@string/charity" />
+
+        <Button
+            android:id="@+id/newsBtn"
+            style="@style/DashboardButton"
+            android:layout_alignBaseline="@+id/charityBtn"
+            android:layout_alignBottom="@+id/charityBtn"
+            android:layout_alignLeft="@+id/banksBtn"
+            android:drawableTop="@drawable/btn_6"
+            android:text="@string/news" />
+
+        <Button
+            android:id="@+id/browserBtn"
+            style="@style/DashboardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/flyBtn"
+            android:layout_below="@+id/flyBtn"
+            android:layout_marginTop="27dp"
+            android:drawableTop="@drawable/btn_8browser"
+            android:text="@string/browser" />
+
+        <Button
+            android:id="@+id/favBtn"
+            style="@style/DashboardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/browserBtn"
+            android:layout_alignBottom="@+id/browserBtn"
+            android:layout_alignLeft="@+id/charityBtn"
+            android:drawableTop="@drawable/btn_7fav"
+            android:text="@string/fav" />
+
+        <Button
+            android:id="@+id/locationBtn"
+            style="@style/DashboardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/favBtn"
+            android:layout_alignBottom="@+id/favBtn"
+            android:layout_alignLeft="@+id/newsBtn"
+            android:drawableTop="@drawable/btn_9location"
+            android:text="@string/location" />
+    </RelativeLayout>
+
+</ScrollView>

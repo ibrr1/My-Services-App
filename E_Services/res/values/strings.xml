@@ -1,0 +1,52 @@
+<resources>
+
+    <string name="app_name">E_Services</string>
+
+    <!-- ==========================Buttons Text================================================ -->
+    <string name="gov_web">مواقع حكومية</string>
+    <string name="universities">جامعات</string>
+    <string name="banks">بنوك</string>
+    <string name="fly">شركات الطيران</string>
+    <string name="charity">جمعيات خيرية</string>
+    <string name="news">الصحف المحلية</string>
+    <string name="fav">المفضلة</string>
+    <string name="browser">تصفح</string>
+    <string name="location">الاماكن القريبة</string>
+
+    <!-- ===========================Menu=============================================== -->
+
+    <string name="action_share">مشاركة</string>
+    <string name="share_chooser_title">مشاركة بواسطة..</string>
+
+    <!-- =========================About================================================= -->
+
+    <string name="feedback">تواصل معنا</string>
+    <string name="about"> عن التطبيق</string>
+    <string name="setting">اعدادات الاشعارات</string>
+    <string name="aboutText">يهدف التطبيق لخدمة المستخدم عن طريق تسهيل آلية الوصول للمواقع الحكومية ومواقع الجامعات والبنوك وغيرها من المواقع الهادفه. <p>\n</p><p>\n</p>تم برمجة التطبيق عن طريق / خريجي جامعة المجمعة / كلية العلوم / تخصص علوم الحاسب والمعلومات .<p>\n</p> - بدر سالم خلوي العنزي .<p>\n</p>- badr-ar-321@hotmail.com  <p>\n</p>- أحمد محمد المعيوف.  <p>\n</p>- skk521@hotmail.com</string>
+    <string name="aboutText2">((مشروع تخرج - كلية العلوم ))</string>
+    
+    <!-- =====================Drop down list for the Map===================================================== -->
+    <string-array name="place_type">
+        <item>restaurant</item>
+        <item>cafe</item>
+        <item>atm</item>
+        <item>pharmacy</item>
+        <item>hospital</item>
+        <item>mosque</item>
+    </string-array>
+    <string-array name="place_type_name">
+        <item>مطاعم</item>
+        <item>كافيهات</item>
+        <item>اجهزة الصرف الالي</item>
+        <item>صيدليات</item>
+        <item>مستشفيات</item>
+        <item>مساجد</item>
+    </string-array>
+
+    <string name="notifications_setting">اعدادات الاشعارات</string>
+    <string name="contact_us">تواصل معنا...</string>
+    <string name="write_here">أكتب هنا..</string>
+    <string name="stop_notifications">ايقاف الاشعارات</string>
+
+</resources>
